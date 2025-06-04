@@ -17,4 +17,4 @@ const renderStars = ({ vote }) => {
     )
 }
 
-export default renderStars
+export default renderStars 

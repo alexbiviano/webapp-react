@@ -65,4 +65,4 @@ const ReviewForm = ({ movie_id, reloadReviews }) => {
     )
 }
 
-export default ReviewForm
+export default ReviewForm 
