@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-review {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.card-image-top {
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    align-items: top;
+    width: 100%;
+}
+
+.card-image-top img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-body h3, .card-body h4 {
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    flex-grow: 1;
+}
+
+.card-body .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}

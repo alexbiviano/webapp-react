@@ -1,17 +1,16 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Header from '../components/Header';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
 
-const DefaultLayout = () => {
+function DefaultLayout() {
     return (
         <>
             <Header />
-            <main className='container'>
+            <main className="container">
                 <Outlet />
             </main>
-            ;
         </>
-    );
-};
+    )
+}
 
 export default DefaultLayout

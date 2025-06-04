@@ -1,17 +1,14 @@
 import React from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import MovieCard from '../components/MovieCard'
-
-
+import FilmCard from '../components/FilmCard'
+import axios from 'axios'
 
 const Homepage = () => {
-    const [movies, setMovies] = useState([]);
 
+    const [movies, setMovies] = useState([])
 
     const fetchMovies = () => {
-        axios.get('http://localhost:3000/movies')
+        axios.get('http://localhost:3000/api/movies')
             .then((response) => {
                 console.log(response.data)
                 setMovies(response.data)
@@ -27,15 +24,18 @@ const Homepage = () => {
 
     return (
         <>
-            <h1 className="text-primary mb-3">Bool Movies</h1>
-            <h2 className="mb-4 fst-italic">The Best Homevideo only for you</h2>
-            <div className="row gy-4">
-                {movies.map((movie) => (
-                    <MovieCard movie={movie} key={`movie-${movie.id}`} />
-                ))}
+            <h1 className='text-danger'>Boolflix</h1>
+            <h2>
+                <i>Il tuo sito di streaming</i>
+            </h2>
+            <div className="row mt-4 gy-4">
+                {movies.map((movie) => {
+                    const { id, title, author, excerpt, image } = movie
+                    return <FilmCard key={`film-${id}`} movie={movie} />
+                })}
+
             </div>
         </>
-
     )
 }
 
