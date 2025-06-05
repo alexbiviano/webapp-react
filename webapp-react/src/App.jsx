@@ -1,9 +1,11 @@
-import DefaultLayout from "./layouts/DefaultLayout"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Homepage from "./pages/HomePage"
-import FilmPage from "./pages/FilmPage"
-import NotFoundPage from "./pages/NotFoundPage"
-import CreateMovie from "./pages/CreateMovie"
+import DefaultLayout from "./layouts/DefaultLayout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/HomePage";
+import FilmPage from "./pages/FilmPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import CreateMovie from "./pages/CreateMovie";
+import GeneralContext from "./contexts/GeneralContext";
+
 
 function App() {
   return (
